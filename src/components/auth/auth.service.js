@@ -27,7 +27,7 @@ class AuthService {
     return refreshToken;
   };
 
-  createToken = (data, { expiresIn = "15m" } = {}) => {
+  createToken = (data, { expiresIn = "7d" } = {}) => {
     return jwt.sign(
       {
         sub: data._id,
